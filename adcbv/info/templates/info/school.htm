@@ -1,0 +1,17 @@
+{% extends 'info/newbase.htm' %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1>Welcome to school details</h1>
+    <h2>School details:</h2>
+    <p>Name: {{ school.name }}</p>
+    <p>Principal: {{ school_deatil.principal }}</p>
+    <p>Location: {{ school_deatil.location }}</p>
+    <h3>Students:</h3>
+
+    {% for students in school_detail.students.all %}
+    <p>{{ student.Name }} who is {{ student.Age }} years old</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
